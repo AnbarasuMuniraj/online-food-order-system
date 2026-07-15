@@ -1,0 +1,331 @@
+/* --- Global Container Override --- */
+#root > div {
+  font-family: var(--sans) !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* --- Heading Styling --- */
+#root h1 {
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  margin-bottom: 36px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Tabs Styling --- */
+#root > div > div[style*="display: flex"] {
+  background-color: rgba(226, 232, 240, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+  padding: 6px !important;
+  border-radius: 14px !important;
+  gap: 6px !important;
+  width: fit-content !important;
+  margin: 0 auto 36px auto !important;
+  border: 1px solid rgba(226, 232, 240, 0.5) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+#root > div > div[style*="display: flex"] > button {
+  font-family: var(--sans) !important;
+  padding: 12px 24px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Active tab style */
+#root > div > div[style*="display: flex"] > button[style*="color: rgb(255, 255, 255)"],
+#root > div > div[style*="display: flex"] > button[style*="color: #fff"],
+#root > div > div[style*="display: flex"] > button[style*="color: white"] {
+  background-color: var(--primary) !important;
+  color: #ffffff !important;
+  box-shadow: var(--shadow-button) !important;
+}
+
+/* Inactive tab style */
+#root > div > div[style*="display: flex"] > button[style*="color: rgb(0, 0, 0)"],
+#root > div > div[style*="display: flex"] > button[style*="color: #000"],
+#root > div > div[style*="display: flex"] > button[style*="color: black"] {
+  background-color: transparent !important;
+  color: #64748b !important;
+}
+
+#root > div > div[style*="display: flex"] > button[style*="color: rgb(0, 0, 0)"]:hover,
+#root > div > div[style*="display: flex"] > button[style*="color: #000"]:hover,
+#root > div > div[style*="display: flex"] > button[style*="color: black"]:hover {
+  background-color: #ffffff !important;
+  color: var(--text-h) !important;
+}
+
+/* --- Card Body Styling (Main view container) --- */
+#root > div > div:nth-of-type(2) {
+  background-color: var(--card-bg) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  border-radius: 20px !important;
+  padding: 40px !important;
+  box-shadow: var(--shadow-card) !important;
+  margin-bottom: 24px !important;
+  box-sizing: border-box !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+#root > div > div:nth-of-type(2) > h2 {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 28px !important;
+  padding-bottom: 18px !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+/* --- Alerts / Messaging --- */
+#root div[style*="color: green"], 
+#root div[style*="color: rgb(0, 128, 0)"] {
+  background-color: #ecfdf5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0 !important;
+  padding: 14px 18px !important;
+  border-radius: 10px !important;
+  margin-bottom: 28px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.05) !important;
+}
+
+#root div[style*="color: red"],
+#root div[style*="color: rgb(255, 0, 0)"] {
+  background-color: #fef2f2 !important;
+  color: #b91c1c !important;
+  border: 1px solid #fca5a5 !important;
+  padding: 14px 18px !important;
+  border-radius: 10px !important;
+  margin-bottom: 28px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.05) !important;
+}
+
+/* --- Form Fields Styling --- */
+#root form {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#root form > div[style*="margin-bottom"] {
+  margin-bottom: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+#root form label {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #475569 !important;
+}
+
+#root form input {
+  font-family: var(--sans) !important;
+  width: 100% !important;
+  padding: 14px 18px !important;
+  font-size: 15px !important;
+  color: var(--text-h) !important;
+  background-color: #f8fafc !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 12px !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#root form input:focus {
+  outline: none !important;
+  border-color: var(--primary) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12) !important;
+}
+
+#root form input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Form Submit Button */
+#root form button[type="submit"] {
+  font-family: var(--sans) !important;
+  padding: 14px 28px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  background-color: var(--success) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: var(--shadow-submit) !important;
+  margin-top: 8px !important;
+  align-self: flex-start !important;
+}
+
+#root form button[type="submit"]:hover:not(:disabled) {
+  background-color: var(--success-hover) !important;
+  transform: translateY(-2px) scale(1.01) !important;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25) !important;
+}
+
+#root form button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0) scale(1) !important;
+}
+
+#root form button[type="submit"]:disabled {
+  background-color: #a7f3d0 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+/* --- Table Styling --- */
+#root table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin-top: 8px !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+#root thead tr {
+  background-color: #f8fafc !important;
+  border-bottom: none !important;
+}
+
+#root th {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #64748b !important;
+  padding: 16px 20px !important;
+  border-bottom: 1px solid var(--border) !important;
+  text-align: left !important;
+}
+
+#root tbody tr {
+  border-bottom: none !important;
+  transition: background-color 0.2s ease !important;
+}
+
+#root tbody tr:hover {
+  background-color: #fafafb !important;
+}
+
+#root td {
+  padding: 18px 20px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  color: var(--text) !important;
+  font-size: 14px !important;
+  vertical-align: middle !important;
+}
+
+#root tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+#root td:first-child {
+  font-family: var(--mono) !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  font-size: 13px !important;
+}
+
+#root td:nth-child(4) {
+  font-weight: 600 !important;
+  color: var(--text-h) !important;
+}
+
+#root td[colspan="5"] {
+  text-align: center !important;
+  padding: 60px !important;
+  color: #94a3b8 !important;
+  font-size: 15px !important;
+}
+
+/* --- Status Badges --- */
+#root td span[style*="padding: 4px 8px"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 6px 14px !important;
+  border-radius: 9999px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  border: 1px solid transparent !important;
+}
+
+/* PLACED */
+#root td span[style*="#fff3cd"],
+#root td span[style*="rgb(255, 243, 205)"] {
+  background-color: #fffbeb !important;
+  color: #d97706 !important;
+  border-color: #fde68a !important;
+}
+
+/* DELIVERED */
+#root td span[style*="#d4edda"],
+#root td span[style*="rgb(212, 237, 218)"] {
+  background-color: #ecfdf5 !important;
+  color: #059669 !important;
+  border-color: #a7f3d0 !important;
+}
+
+/* CANCELLED */
+#root td span[style*="#f8d7da"],
+#root td span[style*="rgb(248, 215, 218)"] {
+  background-color: #fef2f2 !important;
+  color: #dc2626 !important;
+  border-color: #fca5a5 !important;
+}
+
+/* Other intermediate statuses (PAYMENT_COMPLETED, FOOD_READY etc.) */
+#root td span[style*="#d1ecf1"],
+#root td span[style*="rgb(209, 236, 241)"] {
+  background-color: #eff6ff !important;
+  color: #3b82f6 !important;
+  border-color: #bfdbfe !important;
+}
+
+/* --- Responsiveness & Spacing Fixes --- */
+@media (max-width: 768px) {
+  #root {
+    padding: 30px 16px !important;
+  }
+  
+  #root > div > div:nth-of-type(2) {
+    padding: 24px !important;
+    overflow-x: auto !important;
+  }
+  
+  #root h1 {
+    font-size: 28px !important;
+    margin-bottom: 28px !important;
+  }
+  
+  #root td, #root th {
+    padding: 14px 12px !important;
+    font-size: 13px !important;
+  }
+  
+  #root form button[type="submit"] {
+    width: 100% !important;
+    align-self: stretch !important;
+  }
+}
